@@ -14,10 +14,6 @@ R packages:
 - dplyr (1.1.2)
 - metafor (4.2_0)
 
-Recommended to record versions:
-```r
-sessionInfo()
-
 ## 3) Versions tested on
 Tested with: R 4.1.2 on Linux.
 
