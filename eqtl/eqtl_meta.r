@@ -125,6 +125,7 @@ final <- cbind(
 )
 
 final$fdr <- p.adjust(final$Meta_Pval, method = "fdr")
+write.csv(final,paste0(ct,'_eqtl_meta_results.csv'))
 
 # -------------------------
 # 7) Filter by GWAS-significant, risk-increasing SNPs
