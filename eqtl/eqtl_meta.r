@@ -126,6 +126,7 @@ final$fdr <- p.adjust(final$Meta_Pval, method = "fdr")
 
 # -------------------------
 # 7) Filter by GWAS-significant, risk-increasing SNPs
+#    GWAS and eQTL summary statistics were harmonized prior to filtering.
 # -------------------------
 gwas <- as.data.frame(fread("NG_2021_JT.ma"))
 gwas_risk <- gwas[gwas$p_value < 5e-8 & gwas$beta > 0, "rsID"]
