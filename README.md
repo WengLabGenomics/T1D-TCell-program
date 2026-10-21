@@ -13,7 +13,7 @@ This repository contains the analysis code accompanying our study integrating ge
   Genetic colocalization, ATAC-seq, Hi-C, and chromatin-based variant-to-gene mapping (Figure 2).
 
 - **03_Disease_scRNAseq/**  
-  PBMC and pancreatic lymph node single-cell transcriptomic analyses, differential expression, and functional network analysis (Figure 3).
+  PBMC and pancreatic lymph node single-cell transcriptomic analyses, and differential expression (Figure 3).
 
 - **04_CRISPR_perturbation/**  
   CRISPR-based functional screening and validation in murine CD4⁺ and CD8⁺ T cells (Figure 4).
