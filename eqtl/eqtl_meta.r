@@ -11,7 +11,8 @@ library(dplyr)
 library(metafor)
 
 # -------------------------
-# 1) Load per-study eQTL summary statistics
+# 1) Load harmonized per-study eQTL summary statistics
+     All input datasets were harmonized across studies prior to meta-analysis.
 #    Required columns (per file): rsID, Gene, beta, se, p
 # -------------------------
 
