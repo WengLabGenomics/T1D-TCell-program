@@ -16,20 +16,22 @@ library(metafor)
 #    Required columns (per file): rsID, Gene, beta, se, p
 # -------------------------
 
+ct = 'CD4T' # or 'CD8T'
+
 # pathogen_NC_2022
-df1 <- as.data.frame(fread("pathogen_NC_2022_CD4T.csv"))
+df1 <- as.data.frame(fread(paste0("pathogen_NC_2022_",ct,".csv")))
 df1$eqtl <- paste0(df1$rsID, "_", df1$Gene)  # Define unique SNP–gene key
 
 # Nature_2023
-df2 <- as.data.frame(fread("Nature_2023_CD4T.csv"))
+df2 <- as.data.frame(fread(paste0("Nature_2023_",ct,".csv")))
 df2$eqtl <- paste0(df2$rsID, "_", df2$Gene)
 
 # onek1k
-df3 <- as.data.frame(fread("onek1k_CD4T.csv"))
+df3 <- as.data.frame(fread(paste0("onek1k_",ct,".csv")))
 df3$eqtl <- paste0(df3$rsID, "_", df3$Gene)
 
 # Viral_Science_2021
-df4 <- as.data.frame(fread("Viral_Science_2021_CD4T.csv"))
+df4 <- as.data.frame(fread(paste0("Viral_Science_2021_",ct,".csv")))
 df4$eqtl <- paste0(df4$rsID, "_", df4$Gene)
 
 # -------------------------
@@ -134,4 +136,4 @@ gwas_risk <- gwas[gwas$p_value < 5e-8 & gwas$beta > 0, "rsID"]
 final_gwas <- final[final$rsID %in% gwas_risk, ]
 final_gwas_sig <- final_gwas[final_gwas$fdr < 0.05 & final_gwas$Meta_Beta > 0, ]
 
-write.csv(final_gwas_sig, "CD4T_eqtl_meta_results_GWASrisk.csv", row.names = FALSE)
+write.csv(final_gwas_sig, paste0(ct,"_eqtl_meta_results_GWASrisk.csv"), row.names = FALSE)
