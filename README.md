@@ -23,4 +23,4 @@ This repository contains the analysis code accompanying our study integrating ge
 
 ## Data Availability
 
-Public datasets were obtained from the original repositories, including GEO, HPAP PANC-DB, Synapse, eQTLGen, Zenodo, and SNP2Mechanism. Detailed accession numbers and data sources are provided in the manuscript.
+Public datasets were obtained from the original repositories, including GEO, HPAP PANC-DB, Synapse, and Zenodo. Detailed accession numbers and data sources are provided in the manuscript.
